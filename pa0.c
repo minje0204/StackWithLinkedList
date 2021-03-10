@@ -69,7 +69,7 @@ int main(int argc, const char *argv[])
 	dump_stack();
 	fprintf(stderr, "\n");
 
-	/* Pop 2 values */
+	/* Pop 3 values */
 	for (i = 0; i < 3; i++) {
 		memset(buffer, 0x00, MAX_BUFFER);
 		pop_stack(buffer);
