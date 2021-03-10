@@ -47,6 +47,7 @@ void push_stack(char *string)
 {
 	/* TODO: Implement this function */
 
+	x->prev  x->next  <---------
 }
 
 
@@ -74,7 +75,7 @@ int pop_stack(char *buffer)
  *
  * DESCRIPTION
  *   Dump the contents in @stack. Print out @string of stack entries while
- *   traversing the stack from the top to the bottom. Note that the value
+ *   traversing the stack from the bottom to the top. Note that the value
  *   should be printed out to @stderr to get properly graded in pasubmit.
  */
 void dump_stack(void)
