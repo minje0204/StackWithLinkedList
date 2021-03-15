@@ -1,8 +1,5 @@
 ## Project #0: Warming up C programming
 
-### *** Due on 24:00, March 19 (Friday) ***
-
-
 ### Goal
 To warm up C programming, implement the stack with list head. In addition, get familiar with PASubmit, our project assignment management system.  
 
@@ -34,22 +31,3 @@ To warm up C programming, implement the stack with list head. In addition, get f
 - DO NOT ACCESS `prev` and `next` in `list_head` directly. You should use the functions provided by the library to modify entries in the list instead of exploiting internal data structures. YOU WILL NOT GET ANY POINT IF YOUR CODE ACCESS THESE VARIABLES DIRECTLY.
 
 
-### Logistics
-- This is an individual project; you must work on the assignment alone.
-- The detailed logistics will be announced once the PA is started.
-- Create your account at [https://sslab.ajou.ac.kr/pasubmit](https://sslab.ajou.ac.kr/pasubmit).
-	- You don't need to register again if you have an account already. Send an email to instructor if you forgot your password.
-	- New registration will be automatically processed in 10 seconds. Also send an email to instructor if you cannot see this class from your class list.
-  - Send an email to the instructor(sanghoonkim@ajou.ac.kr) in case you forget your ID and/or password.
-- You can find the template code and this handout through the "Handout" button in the PA description. Start this programming assignment by cloning this repository from https://github.com/sslab-ajou/pa0.
-- Submit only `stack.c` for the code. PASubmit will not evaluate your submission if you submit files with different names. You don't need to submit the report nor git repository this time.
-
-
-### Tips and Restriction
-- DO NOT FORK THIS REPOSITORY. "Fork" makes the forked repository as public, and enlists the forked repository in the list. This means, if you fork this repository and submit your work to the repository, other students can easily steal your implemantation, making both of you F.
-- The grading system only examines the messages printed out to `stderr`. Thus, you may use `printf` as you need.
-	- This implies you must print out values properly to implement `dump_stack()` as instructed above. 
-
-- The answer is very easy to guess. However, never forge outputs by explicitly printing out values; it will get penalized as same as the cheating.
-
-- It is highly recommended you to set up an development environment on Debian Linux. In fact, I don't care what operating systems or development environments you are using. But the grading will be done by the result from PASubmit which runs Debian Buster. If your code works fine on your environment but not on PASubmit, it means you wrote wrong code. Period.
