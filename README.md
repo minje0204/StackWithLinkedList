@@ -2,28 +2,22 @@
 linux커널에 있는 **list_head.h**를 이용해서 **stack linked list**로 구현해보기
 
 ### Problem Specification
-- What is [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))?
 
-- To *materialize* the abstract data type into C code, you need some mechanisms to give an ordered relationship between objects. In this programming assignment, it is enforced to use the `stack` instance and `struct entry` data structure declared in `stack.c`.
-  - You should use them as-is without modifying them.
-  - You should not define your own data structures nor instances. It is prohibited to (but not limited to) define your own array and some indexes pointing to the top and tail of the stack.
 
-- The list head is one of the most handy, powerful data structures widely used in the Linux kernel. At first, it looks very weird, and its implementation (in `list_head.h`) is hard to understand even if you have mastered pointers in C. Once you get used to it, however, it will be your best friend for programming in C.
-- In fact, you don't have to understand how it works, but just try to get used to using it. It sounds crazy, but become Neo (believe me).
-- Here are some (but not limited to) sites that may help you
+- `stack.c`에서 정의된 `stack` instance와 `struct entry`를 이용해서 stack을 구현한다.
+  - What is [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))?
+  - `stack.c`에 정의한 `entry` 구조체 변경하지 말고 구현해야한다.
+- `stack.c`에서 `push_stack()`, `pop_stack()`, `dump_stack()` 3개 함수를 완성한다.
+  - `dump_stack()`은 `stack`에 저장되어 있는 모든 contents를 print하는 함수이다. `list_for_`이 붙은 함수 중 하나를 이용해서 구현한다.
+- `struct entry`(stack에 저장되는 컨텐츠를 담고있는 틀)를 array를 할당하거나 정의해서 저장해 놓으면 안된다. 대신, 각 entry는 `malloc`과 `free`를 이용해서 자유롭게 할당 해제 가능하다.
+- `list_head`타입의 `prev`나 `next`에 직접 **access 하지 않는다**. 모든 entry들의 수정은 list_head 라이브러리 구현된 함수를 이용한다.
+
+
+- Linux list_head.h에 대한 설명들
   - Introduction: https://kernelnewbies.org/FAQ/LinkedLists
   - Kernel API manual: https://www.kernel.org/doc/html/v4.15/core-api/kernel-api.html
   - Advanced explanation: https://medium.com/@414apache/kernel-data-structures-linkedlist-b13e4f8de4bf
 
-- There are three functions in `stack.c` waiting for your work. Complete `push_stack()`, `pop_stack()`, and `dump_stack()`.
-
-- `push_stack()` and `pop_stack()` are straightforward. Push the given string value into the stack, or pop the top of the stack. You may use the head of the list head as the top or the bottom of the stack at your own discretion.
-
-- `dump_stack()` should dump the contents in `stack`. Print out the strings in `stack` from the bottom to the top. The strings should be printed out to `stderr` to get properly graded in pasubmit. To traverse the list head, you must use one of the functions with `list_for_` as prefix.
-
-- DO NOT ALLOCATE/DEFINE AN ARRAY TO HOLD `struct entry`. Instead, each entry should be dynamically allocated and freed using `malloc` and `free`.
-
-- DO NOT ACCESS `prev` and `next` in `list_head` directly. You should use the functions provided by the library to modify entries in the list instead of exploiting internal data structures. YOU WILL NOT GET ANY POINT IF YOUR CODE ACCESS THESE VARIABLES DIRECTLY.
 
 ### 출처
 
