@@ -1,13 +1,8 @@
-## Project #0: Warming up C programming
-
-### Goal
-To warm up C programming, implement the stack with list head. In addition, get familiar with PASubmit, our project assignment management system.  
-
+## Implement the stack with the list_head.h
+linux커널에 있는 **list_head.h**를 이용해서 **stack linked list**로 구현해보기
 
 ### Problem Specification
-- Operating systems are full of data structures that abstract many system resources. Thus, you must understand fundamental data structures to explore further into operating systems. In this sense, your task is to **implement the stack with the list head.**
-
-- See [Wikipedia](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) for the explanation about the stack.
+- What is [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))?
 
 - To *materialize* the abstract data type into C code, you need some mechanisms to give an ordered relationship between objects. In this programming assignment, it is enforced to use the `stack` instance and `struct entry` data structure declared in `stack.c`.
   - You should use them as-is without modifying them.
@@ -30,4 +25,5 @@ To warm up C programming, implement the stack with list head. In addition, get f
 
 - DO NOT ACCESS `prev` and `next` in `list_head` directly. You should use the functions provided by the library to modify entries in the list instead of exploiting internal data structures. YOU WILL NOT GET ANY POINT IF YOUR CODE ACCESS THESE VARIABLES DIRECTLY.
 
+### 출처
 
