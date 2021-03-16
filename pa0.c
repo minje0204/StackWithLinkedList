@@ -21,6 +21,7 @@
 #include "types.h"
 #include "list_head.h"
 
+
 /* Stack instance */
 LIST_HEAD(stack);
 
@@ -53,7 +54,7 @@ int main(int argc, const char *argv[])
 	int ret;
 	char buffer[MAX_BUFFER];
 	unsigned int i;
-
+	
 	if (argc != 1) seed = atoi(argv[1]);
 
 	srandom(seed);
@@ -73,7 +74,7 @@ int main(int argc, const char *argv[])
 	for (i = 0; i < 3; i++) {
 		memset(buffer, 0x00, MAX_BUFFER);
 		pop_stack(buffer);
-		fprintf(stderr, "%s\n", buffer);
+		//fprintf(stderr, "%s\n", buffer);
 	}
 	fprintf(stderr, "\n");
 
