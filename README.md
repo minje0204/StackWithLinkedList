@@ -20,5 +20,5 @@ linux커널에 있는 **list_head.h**를 이용해서 **stack linked list**로 �
 
 
 ### 출처
-
-- [김상훈 교수님](https://git.ajou.ac.kr/sslab/pa0)
+- [김상훈 교수님 - GITHUB] (https://github.com/minje0204/os-myshell)
+- [원본 - 학교 GIT](https://git.ajou.ac.kr/sslab/pa0)
